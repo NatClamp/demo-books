@@ -6,8 +6,6 @@ const goodreadsURLBuilder = (title) => {
     return `https://www.goodreads.com/book/title.xml?key=${process.env.GOODREADS_API_KEY}&title=${encodedTitle}`
 }
 
-// console.log(goodreadsURLBuilder('to kill a mockingbird'))
-
 const goodreads = {
     getData: (title, cb) => {
         axios.get(goodreadsURLBuilder(title))
