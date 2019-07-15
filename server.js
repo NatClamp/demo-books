@@ -4,9 +4,10 @@ const bodyParser = require('body-parser')
 const nunjucks = require('nunjucks');
 // const { Client } = require('pg');
 const knex = require('knex');
+require('dotenv').config();
 
 const bookController = require('./controllers/bookController');
-const dbConfig = require('./knexfile')[development];
+const dbConfig = require('./knexfile')['development'];
 
 const connection = knex(dbConfig);
 
