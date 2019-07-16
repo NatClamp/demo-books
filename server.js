@@ -2,26 +2,15 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const nunjucks = require('nunjucks');
-// const { Client } = require('pg');
 const knex = require('knex');
 require('dotenv').config();
 
 const bookController = require('./controllers/bookController');
-const dbConfig = require('./knexfile')['development'];
-
-// const connection = knex(dbConfig);
 
 const connection = knex({
   client: 'pg',
   connection: process.env.DATABASE_URL,
 });
-
-// const client = new Client({
-//     connectionString: process.env.DATABASE_URL,
-//     ssl: true,
-// });
-
-// client.connect();
 
 const app = express();
 
