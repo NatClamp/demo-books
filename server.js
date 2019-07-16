@@ -3,14 +3,12 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const nunjucks = require('nunjucks');
 const knex = require('knex');
+const knexfile = require('./knexfile')
 require('dotenv').config();
 
 const bookController = require('./controllers/bookController');
 
-const connection = knex({
-  client: 'pg',
-  connection: process.env.DATABASE_URL,
-});
+const connection = knex(knexfile);
 
 const app = express();
 
