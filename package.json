@@ -6,7 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node listen.js",
-    "dev": "nodemon listen.js"
+    "dev": "nodemon listen.js",
+    "migrate:make": "knex migrate:make",
+    "migrate:rollback": "knex migrate:rollback",
+    "migrate:latest": "knex migrate:latest",
+    "migrate:seed": "knex seed:run",
+    "seed:run:dev": "knex migrate:rollback && knex migrate:latest && knex seed:run"
   },
   "keywords": [],
   "author": "",
