@@ -5,10 +5,8 @@ exports.up = function(knex, Promise) {
         booksTable
             .string('title')
             .primary();
-        booksTable.string('description');
+        booksTable.string('description', 5000);
         booksTable.string('author');
-        booksTable.string('genre');
-
       })
   ])
 };
