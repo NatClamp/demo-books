@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node listen.js",
-    "dev": "nodemon listen.js",
+    "dev": "nodemon -L listen.js",
     "migrate:make": "knex migrate:make",
     "migrate:rollback": "knex migrate:rollback",
     "migrate:latest": "knex migrate:latest",
