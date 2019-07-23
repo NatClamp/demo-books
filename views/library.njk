@@ -1,0 +1,16 @@
+{% extends 'layout.njk' %}
+
+{% block pageTitle %}
+    <title>HOME | My Library</title>
+{% endblock %}
+
+{% block header %}
+    <h1>A really good header</h1>
+{% endblock %}
+
+{% block content %}
+    {% for book in books %}
+        <h2>{{ book.title }}</h2>
+        <p>{{ book.author }}</p>
+    {% endfor %}
+{% endblock %}
