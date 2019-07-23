@@ -1,9 +1,6 @@
-// currently doing this in server ???
+const knex = require('knex');
+const knexfile = require('../knexfile')
 
-// const knex = require('knex');
+const connection = knex(knexfile);
 
-// const dbConfig = require('../knexfile')[development];
-
-// const connection = knex(dbConfig);
-
-// module.exports = connection;
+module.exports = connection;

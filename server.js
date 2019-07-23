@@ -2,13 +2,9 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const nunjucks = require('nunjucks');
-const knex = require('knex');
-const knexfile = require('./knexfile')
 require('dotenv').config();
 
 const bookController = require('./controllers/bookController');
-
-const connection = knex(knexfile);
 
 const app = express();
 
@@ -27,4 +23,6 @@ app.get('/', bookController.getBooks);
 // app.post('/add-new/submit', bookController);
 // app.get('/info/:id/delete', bookController);
 
-module.exports = { app, connection };
+
+
+module.exports = {app};
