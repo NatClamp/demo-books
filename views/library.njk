@@ -4,13 +4,19 @@
     <title>HOME | My Library</title>
 {% endblock %}
 
-{% block header %}
-    <h1>A really good header</h1>
-{% endblock %}
-
 {% block content %}
+<section class='hero'>
+        <a href='' class='navButton' role="button">+</a>
+    <div class='hero__title'>
+        <h1>Library.</h1>
+    </div>
+</section>
+<main class='mainContent'>
+    <ul class='mainContent__list'>
     {% for book in books %}
-        <h2>{{ book.title }}</h2>
-        <p>{{ book.author }}</p>
+        <li class='mainContent__list mainContent__list--title'><a href=''>{{ book.title }}</a></li>
+        <p class='mainContent__list mainContent__list--author'>{{ book.author }}</p>
     {% endfor %}
+    </ul>
+</main>
 {% endblock %}
