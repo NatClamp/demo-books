@@ -19,10 +19,15 @@ exports.addNew = (req, res, next) => {
 };
 
 exports.postNew = (req, res, next) => {
-  const bookTitle = req.body['title'];
-  return getGoodreadsData(bookTitle).then(data => {
-    res.render('bookInfo.njk', { data });
+  return getGoodreadsData(req.body['title']).then(data => {
+    let book = {
+      title: data.title,
+      author: data.authors.author[0].name,
+      description: data.description,
+      genre: data.popular_shelves.shelf[3].name,
+    };
+    postBook(book).then(resp => {
+      res.redirect('/');
+    });
   });
-
-  // add this data to the database using postBook
 };

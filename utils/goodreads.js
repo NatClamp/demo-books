@@ -1,5 +1,5 @@
 const axios = require('axios');
-const convert = require('xml2js');
+const parser = require('xml2json');
 
 const goodreadsURLBuilder = title => {
   let encodedTitle = title.split(' ').join('+');
@@ -11,15 +11,12 @@ const goodreadsURLBuilder = title => {
 const getGoodreadsData = async title => {
   try {
     const response = await axios.get(goodreadsURLBuilder(title));
-    const data = await convert.parseString(response.data);
-    return data;
+    const data = await parser.toJson(response.data);
+    const parsedData = await JSON.parse(data);
+    return parsedData.GoodreadsResponse.book;
   } catch (err) {
     return console.log(err);
   }
 };
-
-getGoodreadsData('lord of the rings').then(reply => console.log(reply));
-// to get to the author field:
-// console.log(result.GoodreadsResponse.book[0].authors[0].author[0].name[0])
 
 module.exports = { getGoodreadsData };
