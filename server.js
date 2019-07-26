@@ -13,16 +13,19 @@ nunjucks.configure('views', {
   express: app,
 });
 
-app.use(bodyParser.json());
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+ 
+// parse application/json
+app.use(bodyParser.json())
 
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', bookController.getBooks);
-// app.get('/info/:id', bookController);
-// app.get('/add-new', bookController);
-// app.post('/add-new/submit', bookController);
-// app.get('/info/:id/delete', bookController);
-
+app.get('/info/:id', bookController.displayBook);
+app.get('/add-new', bookController.addNew)
+app.post('/add-new/submit', bookController.postNew)
 
 
 module.exports = {app};
