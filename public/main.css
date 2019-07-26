@@ -16,15 +16,15 @@ body {
 /* HERO STYLES */
 .hero {
   background-color: #F09D51;
-  max-height: 30%;
-  min-height: 20%;
+  max-height: 15%;
+  min-height: 9%;
   width: 100%;
 }
 
 .hero__title {
   color: #313638;
   font-size: 35px;
-  padding: 60% 40% 20px 10%;
+  padding: 40% 30% 20px 10%;
 }
 
 .hero__title h1 {
@@ -94,14 +94,13 @@ body {
 @media (min-width: 1025px)  {
 
 .hero {
-  max-height: 30%;
-  min-height: 25%;
+  height: 9%;
 }  
 
 .hero__title {
   /* color: #313638; */
   font-size: 50px;
-  padding: 20% 40% 20px 10%;
+  padding: 10% 30% 2% 10%;
 }
 
 .hero__title h1 {
