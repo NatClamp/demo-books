@@ -1,0 +1,19 @@
+{% extends 'layout.njk' %}
+
+{% block pageTitle %}
+    <title>{{ book.title }}</title>
+{% endblock %}
+
+{% block content %}
+<section class='hero'>
+    <a href='/' class='navButton' role="button"><</a>
+    <div class='hero__title'>
+        <h1>Book.</h1>
+    </div>
+</section>
+<main class='mainContent'>
+    <h2 class='book__title'>{{ book.title }}</h2>
+    <p class='book__author'>{{ book.author }}</p>
+    <p class='book__description'>{{ book.description }}</p>
+</main>
+{% endblock %}
