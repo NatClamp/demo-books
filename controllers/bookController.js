@@ -20,9 +20,11 @@ exports.addNew = (req, res, next) => {
 
 exports.postNew = (req, res, next) => {
   return getGoodreadsData(req.body['title']).then(data => {
+    let author_name = Array.isArray(data.authors.author) ? data.authors.author[0].name : data.authors.author.name;
+    // console.log()
     let book = {
       title: data.title,
-      author: data.authors.author[0].name,
+      author: author_name,
       description: data.description,
       genre: data.popular_shelves.shelf[3].name,
     };
