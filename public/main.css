@@ -5,9 +5,9 @@ body {
   height: 100%;
   width: 100%;
   background-color: #313638;
-  color: #E0DFD5;
+  color: #e0dfd5;
 }
-  
+
 * {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
@@ -15,7 +15,7 @@ body {
 
 /* HERO STYLES */
 .hero {
-  background-color: #F09D51;
+  background-color: #f09d51;
   max-height: 15%;
   min-height: 9%;
   width: 100%;
@@ -35,24 +35,22 @@ body {
 .navButton {
   border-radius: 50%;
   /* border: none; */
-  background-color: #E0DFD5;
-  color: #F09D51;
+  background-color: #e0dfd5;
+  color: #f09d51;
   font-size: 30px;
   text-decoration: none;
   float: right;
   padding: 3% 6%;
   margin: 30px;
-  filter: drop-shadow(10px 10px 10px #DB8F4A)
+  filter: drop-shadow(10px 10px 10px #db8f4a);
 }
 
 .navButton:hover {
-  
 }
-
 
 .navButton:active {
   transform: scale(0.99);
-  filter: drop-shadow(10px 10px 10px #C58143)
+  filter: drop-shadow(10px 10px 10px #c58143);
 }
 
 /* LIBRARY STYLES */
@@ -67,17 +65,13 @@ body {
 
 .mainContent__list--title {
   font-size: 20px;
-  color: #F06543;
+  color: #f06543;
   font-weight: bold;
 }
 
 .mainContent__list--title a {
-  color: #F06543;
+  color: #f06543;
   text-decoration: none;
-}
-
-.mainContent__list--title a:hover {
-
 }
 
 .mainContent__list--author {
@@ -110,16 +104,34 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.submit-button {
+  margin: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 15px 20px;
+  /* border: 2px solid ; */
+  border: none;
+  border-radius: 3px;
+  background-color: #f09d51;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  transition: all 0.2s $bezier;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* text-transform: uppercase; */
+}
+
 /* DETAIL PAGE STYLES */
 .book__title {
-  color: #F06543;
+  color: #f06543;
   font-size: 22px;
   margin-bottom: 5px;
 }
 
 .book__author {
   font-size: 18px;
-  color: #E0DFD5;
+  color: #e0dfd5;
   font-style: italic;
   margin: 0;
 }
@@ -130,80 +142,78 @@ body {
 }
 
 /* MEDIA QUERIES */
-@media (min-width: 1025px)  {
+@media (min-width: 1025px) {
+  .hero {
+    height: 9%;
+  }
 
-.hero {
-  height: 9%;
-}  
+  .hero__title {
+    /* color: #313638; */
+    font-size: 50px;
+    padding: 10% 30% 2% 10%;
+  }
 
-.hero__title {
-  /* color: #313638; */
-  font-size: 50px;
-  padding: 10% 30% 2% 10%;
-}
+  .hero__title h1 {
+    /* font-family: 'Poppins', sans-serif; */
+    margin: 0;
+  }
 
-.hero__title h1 {
-  /* font-family: 'Poppins', sans-serif; */
-  margin: 0;
-}
+  .navButton {
+    font-size: 32px;
+    padding: 2% 2.7%;
+    margin: 60px 70px;
+  }
 
-.navButton {
-  font-size: 32px;
-  padding: 2% 2.7%;
-  margin: 60px 70px;
-}
+  .mainContent {
+    padding: 5% 10%;
+  }
 
-.mainContent {
-  padding: 5% 10%;
-}
-  
-.mainContent__list--title {
-  font-size: 26px;
-  color: #F06543;
-  font-weight: bold;
-}
+  .mainContent__list--title {
+    font-size: 26px;
+    color: #f06543;
+    font-weight: bold;
+  }
 
-.mainContent__list--author {
-  font-size: 20px;
-  font-style: italic;
-  margin-top: 5px;
-  margin-bottom: 20px;
-}
+  .mainContent__list--author {
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
 
-.book__title {
-  color: #F06543;
-  font-size: 40px;
-  margin-bottom: 5px;
-}
+  .book__title {
+    color: #f06543;
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
 
-.book__author {
-  font-size: 30px;
-  color: #E0DFD5;
-  font-style: italic;
-}
+  .book__author {
+    font-size: 30px;
+    color: #e0dfd5;
+    font-style: italic;
+  }
 
-.book__description {
-  margin-top: 30px;
-  line-height: 1.5em;
-}
+  .book__description {
+    margin-top: 30px;
+    line-height: 1.5em;
+  }
 
-.form-group {
-  margin: 10px;
-  padding-bottom: 30px;
-}
+  .form-group {
+    margin: 10px;
+    padding-bottom: 30px;
+  }
 
-.label {
-  display: block;
-  padding: 0 0 10px 0;
-  font-size: 18px;
-  font-style: italic;
-}
+  .label {
+    display: block;
+    padding: 0 0 10px 0;
+    font-size: 18px;
+    font-style: italic;
+  }
 
-.form-input {
-  width: 60%;
-  padding: 10px;
-  font-size: 16px;
-  font-family: 'Roboto', sans-serif;
-}
-  
+  .form-input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+  }
 }
