@@ -23,6 +23,7 @@ app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', bookController.getBooks);
+app.get('/:id', bookController.getBooks);
 app.get('/info/:id', bookController.displayBook);
 app.get('/add-new', bookController.addNew)
 app.post('/add-new/submit', bookController.postNew)

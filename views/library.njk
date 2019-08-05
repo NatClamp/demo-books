@@ -18,5 +18,8 @@
         <p class='mainContent__list mainContent__list--author'>{{ book.author }}</p>
     {% endfor %}
     </ul>
+    <a href='/p={{ p - 1 }}' class=''><<</a>
+    <p>{{ p }}</p>
+    <a href='/p={{ p + 1 }}' class=''>>></a>
 </main>
 {% endblock %}

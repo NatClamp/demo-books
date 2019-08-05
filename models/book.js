@@ -1,8 +1,10 @@
 const knex = require('../db/connection')
 
-exports.getLibrary = () => {
+exports.getLibrary = (limit, p) => {
     return knex
     .from('books')
+    .limit(Math.abs(limit))
+    .offset(limit * (p - 1))
     .select('*')
 }
 
