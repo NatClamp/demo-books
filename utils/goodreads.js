@@ -19,4 +19,9 @@ const getGoodreadsData = async title => {
   }
 };
 
-module.exports = { getGoodreadsData };
+const descriptionClean = description => {
+  let cleanDescription = description.replace(/<.>/g, '').replace(/<\/.>/g, '').replace(/<br \/>/g, '')
+  return cleanDescription;
+}
+
+module.exports = { getGoodreadsData, descriptionClean };
