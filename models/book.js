@@ -18,3 +18,9 @@ exports.postBook = (book) => {
     .insert(book)
     .returning('*')
 }
+
+exports.deleteBook = (book_id) => {
+    return knex('books')
+    .where('id', book_id)
+    .del()
+}

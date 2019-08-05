@@ -15,5 +15,9 @@
     <h2 class='book__title'>{{ book.title }}</h2>
     <p class='book__author'>{{ book.author }}</p>
     <p class='book__description'>{{ book.description }}</p>
+    <form action="/info/{{ book.id }}/delete" method="post">
+        <button type="submit" class="submit-button" id="delete-button" name="delete">Delete</button>
+    </form>
+
 </main>
 {% endblock %}

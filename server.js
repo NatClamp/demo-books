@@ -26,6 +26,7 @@ app.get('/', bookController.getBooks);
 app.get('/info/:id', bookController.displayBook);
 app.get('/add-new', bookController.addNew)
 app.post('/add-new/submit', bookController.postNew)
+app.post('/info/:id/delete', bookController.deleteBook)
 
 
 module.exports = {app};

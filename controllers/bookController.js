@@ -1,4 +1,4 @@
-const { getLibrary, getBook, postBook } = require('../models/book');
+const { getLibrary, getBook, postBook, deleteBook } = require('../models/book');
 const { getGoodreadsData } = require('../utils/goodreads');
 
 exports.getBooks = (req, res, next) => {
@@ -21,7 +21,6 @@ exports.addNew = (req, res, next) => {
 exports.postNew = (req, res, next) => {
   return getGoodreadsData(req.body['title']).then(data => {
     let author_name = Array.isArray(data.authors.author) ? data.authors.author[0].name : data.authors.author.name;
-    // console.log()
     let book = {
       title: data.title,
       author: author_name,
@@ -33,3 +32,10 @@ exports.postNew = (req, res, next) => {
     });
   });
 };
+
+exports.deleteBook = (req, res, next) => {
+  return deleteBook(req.params.id)
+  .then(resp => {
+    res.redirect('/')
+  })
+}
