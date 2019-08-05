@@ -16,7 +16,7 @@ body {
 /* HERO STYLES */
 .hero {
   background-color: #f09d51;
-  max-height: 15%;
+  max-height: 13%;
   min-height: 9%;
   width: 100%;
 }
@@ -24,7 +24,7 @@ body {
 .hero__title {
   color: #313638;
   font-size: 35px;
-  padding: 40% 30% 20px 10%;
+  padding: 15% 30% 20px 10%;
 }
 
 .hero__title h1 {
@@ -40,12 +40,9 @@ body {
   font-size: 30px;
   text-decoration: none;
   float: right;
-  padding: 3% 6%;
+  padding: 2% 4%;
   margin: 30px;
   filter: drop-shadow(10px 10px 10px #db8f4a);
-}
-
-.navButton:hover {
 }
 
 .navButton:active {
@@ -104,22 +101,28 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.submit-button {
-  margin: 10px;
+.button {
+  margin: 10px 0;
   -webkit-appearance: none;
   -moz-appearance: none;
   padding: 15px 20px;
-  /* border: 2px solid ; */
-  border: none;
   border-radius: 3px;
-  background-color: #f09d51;
-  color: black;
   font-family: 'Roboto', sans-serif;
+  color: black;
   font-size: 16px;
   letter-spacing: 0.05em;
-  transition: all 0.2s $bezier;
+  transition: all 0.2s;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  /* text-transform: uppercase; */
+}
+
+.button--submit {
+  background-color: #f09d51;
+  border: none;
+}
+
+.button--delete {
+  border: 3px solid #f09d51;
+  background-color: #e0dfd5;
 }
 
 /* DETAIL PAGE STYLES */
@@ -142,6 +145,14 @@ body {
 }
 
 /* MEDIA QUERIES */
+@media (min-width: 768px) {
+  .navButton {
+    font-size: 32px;
+    padding: 3% 4%;
+    margin: 60px 70px;
+  }
+}
+
 @media (min-width: 1025px) {
   .hero {
     height: 9%;
