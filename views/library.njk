@@ -18,12 +18,14 @@
         <p class='mainContent__list mainContent__list--author'>{{ book.author }}</p>
     {% endfor %}
     </ul>
+    <section class='pagination'>
     {% if page > 1 %}
-    <a href='?p={{ page - 1 }}' class='pagination-arrows'><<</a>
+        <a href='?p={{ page - 1 }}' class='pagination-arrows'><<</a>
     {% endif %}
-    <p>{{ page }}</p>
+        <p>{{ page }}</p>
     {% if lastPage != true %}
-    <a href='?p={{ page + 1 }}' class='pagination-arrows'>>></a>
+        <a href='?p={{ page + 1 }}' class='pagination-arrows'>>></a>
     {% endif %}
+    </section>
 </main>
 {% endblock %}
