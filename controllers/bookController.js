@@ -2,14 +2,12 @@ const { getLibrary, getBook, postBook, deleteBook } = require('../models/book');
 const { getGoodreadsData, descriptionClean } = require('../utils/goodreads');
 
 exports.getBooks = (req, res, next) => {
-  const { limit = 5, p = 1 } = req.params;
-  console.log(p)
-  getLibrary(limit, p).then(books => {
-    if (p > 1) {
-      res.redirect(`/p=${p}`)
-    } else {
-      res.status(200).render('library.njk', { books, p });
-    }
+  let { limit = 5, p = 1 } = req.query;
+  let bookLimit = +limit
+  let page = +p
+  getLibrary(bookLimit, page).then(books => {
+    lastPage = books.length < 5 ? true : false;
+    res.status(200).render('library.njk', { books, page, lastPage });
   });
 };
 
