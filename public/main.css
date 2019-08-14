@@ -52,7 +52,8 @@ body {
 
 /* LIBRARY STYLES */
 .mainContent {
-  padding: 10%;
+  margin: 10%;
+  height: 350px;
 }
 
 .mainContent__list {
@@ -77,20 +78,37 @@ body {
   margin-top: 0;
 }
 
+.pagination-container {
+  position: absolute;
+  bottom: 30px;
+  margin: 0 auto;
+  width: 100%;
+
+}
+
 .pagination {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 250px;
+  height: 50px;
 }
 
-a.pagination {
+.pagination a {
   text-decoration: none;
+  font-weight: bold;
+}
+
+.pagination-page {
+  font-weight: bold;
 }
 
 .pagination-arrows {
   color: #c58143;
   font-size: 18px;
+}
+
+.pagination-arrows__disabled {
+  color: grey;
 }
 
 /* ADD NEW BOOK PAGE STYLES */
@@ -190,7 +208,9 @@ a.pagination {
   }
 
   .mainContent {
-    padding: 5% 10%;
+    margin: 5% 10% 3% 10%;
+    max-height: 400px;
+    min-height: 400px;
   }
 
   .mainContent__list--title {
@@ -204,6 +224,17 @@ a.pagination {
     font-style: italic;
     margin-top: 5px;
     margin-bottom: 20px;
+  }
+
+  .pagination-container {
+    position: relative;
+    margin: auto;
+  }
+
+  .pagination {
+    margin-left: 100px;
+    width: 250px;
+
   }
 
   .book__title {
