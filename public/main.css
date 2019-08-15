@@ -34,13 +34,12 @@ body {
 
 .navButton {
   border-radius: 50%;
-  /* border: none; */
   background-color: #e0dfd5;
   color: #f09d51;
   font-size: 30px;
   text-decoration: none;
   float: right;
-  padding: 2% 4%;
+  padding: 2.25% 4%;
   margin: 30px;
   filter: drop-shadow(10px 10px 10px #db8f4a);
 }
@@ -81,16 +80,17 @@ body {
 .pagination-container {
   position: absolute;
   bottom: 30px;
-  margin: 0 auto;
-  width: 100%;
+  width: 100%
 
 }
 
 .pagination {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   height: 50px;
+  width: 75%;
+  margin: 0 auto;
 }
 
 .pagination a {
@@ -109,6 +109,7 @@ body {
 
 .pagination-arrows__disabled {
   color: grey;
+  cursor: not-allowed;
 }
 
 /* ADD NEW BOOK PAGE STYLES */
@@ -182,7 +183,7 @@ body {
 @media (min-width: 768px) {
   .navButton {
     font-size: 32px;
-    padding: 3% 4%;
+    padding: 2.5% 4%;
     margin: 60px 70px;
   }
 }
@@ -228,14 +229,14 @@ body {
 
   .pagination-container {
     position: relative;
-    margin: auto;
+    margin-left: 10%;
+    max-width: 300px;
   }
 
   .pagination {
-    margin-left: 100px;
-    width: 250px;
-
+    width: 100%;
   }
+
 
   .book__title {
     color: #f06543;
