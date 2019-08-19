@@ -156,8 +156,9 @@ body {
 }
 
 .button--delete {
-  border: 3px solid #f09d51;
-  background-color: #e0dfd5;
+  border: 1px solid #f09d51;
+  color: #e0dfd5;
+  background-color: #313638;
 }
 
 /* DETAIL PAGE STYLES */
