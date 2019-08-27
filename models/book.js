@@ -6,7 +6,6 @@ exports.getLibrary = (limit, p) => {
     .limit(Math.abs(limit))
     .offset(limit * (p - 1))
     .select('*')
-    .returning('*')
 }
 
 exports.getBook = (id) => {

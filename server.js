@@ -29,4 +29,4 @@ app.post('/add-new/submit', bookController.postNew)
 app.post('/info/:id/delete', bookController.deleteBook)
 
 
-module.exports = {app};
+module.exports = app;

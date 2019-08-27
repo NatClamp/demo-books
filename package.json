@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha ./spec/*",
     "start": "node listen.js",
     "dev": "nodemon -L listen.js",
     "migrate:make": "knex migrate:make",
@@ -24,6 +24,7 @@
     "express": "^4.17.1",
     "heroku": "^7.27.1",
     "knex": "^0.17.5",
+    "mocha": "^6.2.0",
     "nodemon": "^1.19.1",
     "nunjucks": "^3.2.0",
     "pg": "^7.11.0",
