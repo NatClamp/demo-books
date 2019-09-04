@@ -50,14 +50,16 @@ describe('Database', () => {
             .then(res => expect(res[0]).to.eql(bookWithId))
             .done()
         });
-        it.skip('should increase the number of books in the library by one', () => {
+
+        // NEEDS WORK
+        it('should increase the number of books in the library by one', () => {
         const newBook = {
             title: 'Moby-Dick, or, the Whale',
             author: 'Herman Melville',
             description: "\"It is the horrible texture of a fabric that should be woven of ships' cables and hawsers. A Polar wind blows through it, and birds of prey hover over it.'",
             genre: "fiction",
         };
-        postBook(newBook)
+        return postBook(newBook)
         .then(() => getLibrary(5,1))
         .then(res => expect(res).to.equal(4))
         .done()
