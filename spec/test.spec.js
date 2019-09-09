@@ -61,8 +61,8 @@ describe('Database', () => {
         };
         return postBook(newBook)
         .then(() => getLibrary(5,1))
-        .then(res => expect(res).to.equal(4))
-        .done()
+        .then(res => expect(res.length).to.equal(4))
+        .done();
     });
 
 });
